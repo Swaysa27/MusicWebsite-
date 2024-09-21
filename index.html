@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSIC WEBBSITE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="image/aanshi.png">
+</head>
+<body>
+  <nav>
+<label class="logo">
+  <img src="image/1000_F_106476142_zMZkkTkhMeq0DIjV20oJI00e3QXLYIGN.jpg" width="110px" height="90px" alt="music logo">
+</label>
+<ul>
+  <li><a href="#">HOME</a></li>
+  <li><a href="#">EVENT</a></li>
+  <li><a href="#">ABOUT</a></li>
+  <li><a href="#">CONTACT</a></li>
+</ul>
+  </nav>
+<main>
+  <div class="text">
+<h1>THE<br><span>&nbsp;&nbsp;&nbsp;REAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <br> SOUND</h1>
+  </div>
+  <div class="play">
+    <p></p>
+    <img src="image/play.jpg" id="icon" alt="">
+  </div>
+  <audio  autoplay loop id="mysong">
+    <source src="image/free-bollywood-mp3-ringtones-mobile9-929.mp3" type="audio/mp3">
+    <!-- <source src="image/The-Love-Mashup-Song-2023(PagalWorld).mp3" type="audio/mp3"> -->
+
+  </audio>
+  <script>
+    var mysong=document.getElementById("mysong");
+    var icon=document.getElementById("icon");
+    icon.onclick=function(){
+     if(mysong.paused){
+      mysong.play();
+      icon.src="image/pause.png"
+     }
+     else{
+      mysong.pause();
+      icon.src="image/play.jpg";
+     }
+    }
+  </script>
+</main>
+</body>
+</html>
